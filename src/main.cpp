@@ -16,6 +16,18 @@ void drawPixel(sf::RenderWindow& window, sf::Vector2i position, sf::Color color)
 	window.draw(pixel.data(), 1, sf::Points);
 }
 
+//Day 2 Function
+void drawHorizontalLine(sf::RenderWindow& window, sf::Vector2u startPoint, int lineLength, sf::Color color)
+{
+	//Loop through each point, set x to startPoint's x value
+	for (auto x = startPoint.x; x < lineLength; x++) {
+		//set y to startPoint's y value
+		auto y = startPoint.y;
+		//Use drawPixel to draw line
+		drawPixel(window, sf::Vector2i(x, y), color);
+	}
+}
+
 int main() {
 	//(sf::VideoMode{1920, 1080}) determines the window size
 	sf::RenderWindow window{ sf::VideoMode{1920, 1080}, "SFML Demo" };
@@ -45,6 +57,9 @@ int main() {
 			//(sf::Color::Red) determines the color)
 			drawPixel(window, sf::Vector2i(x, y), sf::Color::Red);
 		}
+
+		//Create a horizontal line starting at (50,300) of a length of 1000 that is Yellow
+		drawHorizontalLine(window, sf::Vector2u(50,300), 1000, sf::Color::Yellow);
 
 
 		window.display();
