@@ -40,7 +40,7 @@ int main() {
 		*/
 		for (auto x = 0; x < 500; x++) {
 			auto y = static_cast<int32_t>(2.0 / 3.0 * x + 40);
-			drawPixel(window, sf::Vector2i(x, y), sf::Color::White);
+			drawPixel(window, sf::Vector2i(x, y), sf::Color::Red);
 		}
 
 
