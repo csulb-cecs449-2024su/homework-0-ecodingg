@@ -17,7 +17,7 @@ void drawPixel(sf::RenderWindow& window, sf::Vector2i position, sf::Color color)
 }
 
 int main() {
-	sf::RenderWindow window{ sf::VideoMode{800, 800}, "SFML Demo" };
+	sf::RenderWindow window{ sf::VideoMode{1920, 1080}, "SFML Demo" };
 	sf::Clock c;
 	auto last = c.getElapsedTime();
 
